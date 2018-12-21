@@ -1,8 +1,16 @@
-FROM ubuntu:18.04
+FROM ubuntu:latest
 
-MAINTAINER Jiasen Low <jiasenlow@gmail.com>
-
-RUN apt-get update && apt-get install -y git wget curl openssl curl gnupg
+RUN apt-get update && apt-get install -y \
+   git \
+   wget \
+   curl \
+   openssl \
+   curl \
+   gnupg \
+   build-essential \
+   libreadline-dev \
+   zlib1g-dev \
+   libssl1.0-dev
 
 RUN git clone git://github.com/rbenv/rbenv.git /usr/local/rbenv \
 &&  git clone git://github.com/rbenv/ruby-build.git /usr/local/rbenv/plugins/ruby-build \
