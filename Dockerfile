@@ -1,4 +1,4 @@
-FROM buildpack-deps:bionic-scm
+FROM buildpack-deps:bionic
 
 RUN apt-get update && apt-get install -y \
    git \
